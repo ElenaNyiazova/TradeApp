@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Gui extends JFrame {
+    private JComboBox<String> comboBoxAccounts = new JComboBox<>();
     private JButton addNewAccount = new JButton("Add new account");
 
 
@@ -13,9 +14,10 @@ public class Gui extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         Container cont = this.getContentPane();
-        cont.setLayout(new GridLayout(6,3,5,5));
+        cont.setLayout(new GridLayout(6,5,5,5));
 
         //cont.setLayout();
+        cont.add(comboBoxAccounts);
         cont.add(addNewAccount);
 
 
