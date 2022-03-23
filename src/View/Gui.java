@@ -1,11 +1,18 @@
 package View;
 
+import DAO.DataBase;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class Gui extends JFrame {
+    DataBase dataBase = new DataBase();
     private JComboBox<String> comboBoxAccounts = new JComboBox<>();
     private JButton addNewAccount = new JButton("Add new account");
+    private JButton addNewBid = new JButton("Add new bid");
+
+    String[] colomnNames = {"id", "Stock name", "Stock quantity", "Cost"};
+    private  JTable table = new JTable(dataBase.getUserData(1L), colomnNames);
 
 
     public Gui(){
@@ -19,6 +26,8 @@ public class Gui extends JFrame {
         //cont.setLayout();
         cont.add(comboBoxAccounts);
         cont.add(addNewAccount);
+        cont.add(table);
+        cont.add(addNewBid);
 
 
 
