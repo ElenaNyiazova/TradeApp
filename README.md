@@ -1,1 +1,1 @@
-# ChildrenTradeApp
+# TradeApp
